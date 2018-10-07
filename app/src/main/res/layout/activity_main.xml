@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.MainActivity">
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btStartScan"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_new_bar_code"
+            app:icon="@drawable/ic_camera_scan"
+            android:layout_margin="10dp"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSvcannedIdList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_bar_code"/>
+    </LinearLayout>
+</layout>
